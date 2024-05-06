@@ -1,3 +1,5 @@
+MAX_LINES= 3
+
 def entry():
     amt = input("Enter the amount to be deposited:")
     '''Normally, I would've just written:
@@ -13,3 +15,19 @@ def entry():
     else:
         print("Error.Enter a number.")
     return amt
+
+    def no_of_lines():
+    '''The input should be valid.'''
+    lines= input("Input numer of lines:")
+    if lines.isdigit():
+        lines= int(lines)
+        if 1 =< lines =< MAX_LINES:
+            break
+        else:
+            print("The number of lines should be valid.")
+    else:
+        print("Enter a number.")
+    return lines
+
+
+def main():
