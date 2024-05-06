@@ -1,4 +1,5 @@
 MAX_LINES= 3
+#Can adjust the number of acceptablle lines.
 
 def entry():
     amt = input("Enter the amount to be deposited:")
@@ -16,7 +17,7 @@ def entry():
         print("Error.Enter a number.")
     return amt
 
-    def no_of_lines():
+def no_of_lines():
     '''The input should be valid.'''
     lines= input("Input numer of lines:")
     if lines.isdigit():
@@ -31,3 +32,7 @@ def entry():
 
 
 def main():
+    balance= deposit()
+    lines= no_of_lines()
+    print(balance,lines)
+    #display input to users
