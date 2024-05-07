@@ -1,4 +1,5 @@
 MAX_LINES=3
+#Users can't bet more than 3 lines
 
 def entry():
     amt = input("Enter the amount to be deposited:")
