@@ -1,5 +1,7 @@
 MAX_LINES=3
 #Users can't bet more than 3 lines
+MAX_BET=1
+MAX_BET=100
 
 def entry():
     amt = input("Enter the amount to be deposited:")
@@ -29,6 +31,31 @@ def no_of_lines():
         print("Enter a number.")
     return lines
 
+def bet_amt():
+    bet_amt= int(input("Enter the betting amount per line:"))
+    if MIN_BET =< bet_amt =< MAX_BET:
+        break
+    else:
+        print("Enter the valid betting amount.")
+    return bet_amt
+
+
 
 def main():
+    balance= amt()
+    lines= no_of_lines()
+    print(f"Your balance is {amt} and no of lines you are betting on:{lines}")
+    bet=bet_amt()
+    total= lines*bet
+    if balance >= bet:
+        print(f"Is your bet amount {bet}?")
+        ans= input("Yes or No")
+        if ans=="Yes":
+        print(f"Your total amounts to {total}")
+        else:
+        print("Betting is off. Get out.")
+    else:
+        break
+    
+
     
