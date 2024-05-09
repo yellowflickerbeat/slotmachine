@@ -1,7 +1,25 @@
+import random
 MAX_LINES=3
 #Users can't bet more than 3 lines
-MAX_BET=1
+MIN_BET=1
 MAX_BET=100
+
+count= {
+    "A": 2,
+    "B": 4,
+    "C": 6,
+    "D": 8
+}
+def spin(rows, cols, count):
+    all_symbols = []
+    for symbol, count in all_symbols.items():
+        for i in range(count):
+            all_symbols.append(symbol)
+    columns = [[], [], []]
+    for col in range(rows):
+        #initialize
+        column = []
+
 
 def entry():
     amt = input("Enter the amount to be deposited:")
@@ -42,7 +60,7 @@ def bet_amt():
 
 
 def main():
-    balance= amt()
+    balance= entry()
     lines= no_of_lines()
     print(f"Your balance is {amt} and no of lines you are betting on:{lines}")
     bet=bet_amt()
@@ -51,9 +69,9 @@ def main():
         print(f"Is your bet amount {bet}?")
         ans= input("Yes or No")
         if ans=="Yes":
-        print(f"Your total amounts to {total}")
+            print(f"Your total amounts to {total}")
         else:
-        print("Betting is off. Get out.")
+            print("Betting is off. Get out.")
     else:
         break
     
